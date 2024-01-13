@@ -2,6 +2,8 @@ import "./App.css";
 import TodoRowItem from "./components/TodoRowItem";
 
 function App() {
+
+  const todos = [{rowNumber:1,rowDescription:'Feed puppy', rowAssigned:'User One'}]
   return (
     <div className='mt-5 container'>
       <div className="card">
@@ -17,6 +19,7 @@ function App() {
               </tr>
             </thead>
             <tbody>
+             <TodoRowItem/>
              <TodoRowItem/>
               <tr>
                 <th scope="row">2</th>
