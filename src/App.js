@@ -1,5 +1,5 @@
 import "./App.css";
-import TodoRowItem from "./components/TodoRowItem";
+import TodoTable from "./components/TodoTable";
 
 function App() {
 
@@ -12,25 +12,7 @@ function App() {
         <div className="card-header">You Todo's
         </div>
         <div className="card-body">
-          <table className="table table-hover">
-            <thead>
-              <tr>
-                <th scope="col">#</th>
-                <th scope="col">Description</th>
-                <th scope="col">Assigned</th>
-              </tr>
-            </thead>
-            <tbody>
-            <TodoRowItem rowNumber={todos[0].rowNumber}
-             rowDescription={todos[0].rowDescription} 
-             rowAssigned={todos[0].rowAssigned}/>
-              <tr>
-                <th scope="row">2</th>
-                <td>Get haircut</td>
-                <td>Eric</td>
-              </tr>
-            </tbody>
-          </table>
+        <TodoTable todos={todos}/>
         </div>
       </div>
     </div>
