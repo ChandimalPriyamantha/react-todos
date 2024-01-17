@@ -41,11 +41,12 @@ function App() {
         </div>
         <div className="card-body">
         <TodoTable todos={todos} deleteTodo={deleteTodo}/>
-        <button onClick={() => setShowAddTodoFrom(!showAddTodoForm)} className="btn btn-primary" onClick={addTodo}>Add new todo</button>
-        newTodo
+       <button onClick={() => setShowAddTodoFrom(!showAddTodoForm)} className="btn btn-primary" >
+        {showAddTodoForm ? 'Close New Todo' : 'New Todo'}
+       </button>
         {showAddTodoForm && 
-        <NewTodoForm = {addTodo}/>}
-        <NewTodoForm addTodo={addTodo}/>
+         <NewTodoForm addTodo={addTodo}/>
+        }
         </div>
       </div>
     </div>
